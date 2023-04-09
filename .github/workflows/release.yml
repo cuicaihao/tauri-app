@@ -1,10 +1,13 @@
-name: "test-on-pr"
+name: "publish"
 on:
-  pull_request:
-    branches: [master, develop]
+  push:
+    tags:
+      - "v*"
 
 jobs:
-  test-tauri:
+  publish-tauri:
+    permissions:
+      contents: write
     strategy:
       fail-fast: false
       matrix:
@@ -29,3 +32,9 @@ jobs:
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
+          releaseName: "App v__VERSION__"
+          releaseBody: "See the assets to download this version and install."
+          releaseDraft: true
+          prerelease: false
