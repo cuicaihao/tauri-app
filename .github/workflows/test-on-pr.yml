@@ -1,7 +1,7 @@
 name: "test-on-pr"
 on:
   pull_request:
-    branches: [develop]
+    branches: [master, develop]
 
 jobs:
   test-tauri:
