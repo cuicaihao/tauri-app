@@ -1,6 +1,14 @@
-# Tauri + Vanilla TS
+# Tauri App  
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Typescript.
+This template should help get you started developing with Tauri in vanilla HTML, CSS and Typescript (Vite/React-ts).
+
+- [Tauri App](#tauri-app)
+  - [Recommended IDE Setup](#recommended-ide-setup)
+  - [Build and Run](#build-and-run)
+    - [Start Frontend](#start-frontend)
+    - [Start Tauri](#start-tauri)
+    - [Build Tauri](#build-tauri)
+  - [Refrences](#refrences)
 
 ## Recommended IDE Setup
 
